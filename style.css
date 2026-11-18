@@ -1,0 +1,76 @@
+/* Custom Styling for NoteBook 3-Panel */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Smooth Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.4);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 0.7);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: rgba(75, 85, 99, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: rgba(107, 114, 128, 0.8);
+}
+
+/* Transitions */
+.transition-layout {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Note Card Active Effect */
+.note-card.active {
+    border-left-width: 4px;
+}
+
+/* Textarea auto-height without ugly scroll */
+.editor-textarea {
+    resize: none;
+    line-height: 1.7;
+}
+
+/* Print Styling */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #editor-panel, #editor-panel * {
+        visibility: visible;
+    }
+    #editor-panel {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+}

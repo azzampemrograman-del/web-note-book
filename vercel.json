@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "functions": {
+    "api.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+    "index.php": {
+      "runtime": "vercel-php@0.7.3"
+    },
+    "setup.php": {
+      "runtime": "vercel-php@0.7.3"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api.php",
+      "dest": "/api.php"
+    },
+    {
+      "src": "/setup.php",
+      "dest": "/setup.php"
+    },
+    {
+      "src": "/style.css",
+      "dest": "/style.css"
+    },
+    {
+      "src": "/app.js",
+      "dest": "/app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.php"
+    }
+  ]
+}
